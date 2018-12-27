@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import PropTypes from "prop-types";
 import { fetchQuestions } from '../actions/questions';
 import "../App.css";
 
-class GetAllQuestions extends Component {
+class getAllQuestions extends Component {
 
     componentWillMount(){
         this.props.fetchQuestions();
     }
 
-    
     render() {
-        const { questions } = this.props;
-        const questionsItems = (questions).map((question) => (
+        const questionsItems = (this.props.questions).map((question) => (
             <div key={question.questionId} className="panel panel-default">
                     
                 <NavLink to={{pathname: `/questions/${question.questionId}`}}>
@@ -26,38 +23,15 @@ class GetAllQuestions extends Component {
         ));
         return (
             <div>
-                <div>
-                    {questions.length > 1 ? 
-                    (
-                        <div>
-                    <h3>All Questions</h3> 
-                    <div>{questionsItems}</div>
-                    </div>
-                    )
-                    : <div className="text-center">
-                    <img
-                      src="https://media.giphy.com/media/jAYUbVXgESSti/giphy.gif"
-                      className="loading__image"
-                      alt=""
-                    />
-                  </div> }
-                </div>
-               
+                <h3>All Questions</h3>
+                { questionsItems }
                 
             </div>
-        )
-        
-
+        );
     }
 }
 
-GetAllQuestions.propTypes = {
-    questions: PropTypes.array.isRequired,
-    fetchQuestions: PropTypes.func.isRequired,
-
-};
-
-export const mapStateToProps = state => ({
+const mapStateToProps = state => ({
     questions: state.questions.questions,
 });
 
