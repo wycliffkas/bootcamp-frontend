@@ -29,12 +29,3 @@ dispatch({ type: FETCH_QUESTION, payload: response });
 });
 });
 
-
-// export const fetchQuestion = (id) => dispatch => {
-//     fetch(`https://stack-challenge3.herokuapp.com/stack_overflow/api/v1/questions/${id}`)
-//     .then(res => res.json())
-//     .then(data => dispatch({
-//         type: FETCH_QUESTION,
-//         payload: data
-//     }))
-// };
