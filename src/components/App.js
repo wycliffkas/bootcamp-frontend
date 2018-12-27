@@ -1,13 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Header from './pages/Header';
+import Footer from './pages/Footer';
+import GetAllQuestions from './GetAllQuestions';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>My React App</h1>
-            </div>
-        );
-    }
-}
+const App = () => (
+    <div>
+        <Header /> 
+        <div className="container">
+            <Switch>
+                <Route exact path="/" component={GetAllQuestions} />
+            </Switch>
+        </div>
+        <Footer />
+    </div>
+);
 
 export default App;
