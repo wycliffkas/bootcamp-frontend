@@ -59,5 +59,25 @@ fetch('https://stack-challenge3.herokuapp.com/stack_overflow/api/v1/auth/signup'
     }
 })
 
+export const loginUser = (user) => dispatch => {
+    fetch('https://stack-challenge3.herokuapp.com/stack_overflow/api/v1/auth/login', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+    .then(res =>{
+        const response = res.json();
+        if (res.status === 200) {
+            response.then(reponse =>{
+            localStorage.setItem("token", response.token);
+            dispatch({ type: LOGIN_USER, payload: response })});
+        } else {
+            response.then(response =>
+            dispatch({ type: LOGIN_USER_FAIL, payload: response }));
+        }
+    })
+};
 
 
