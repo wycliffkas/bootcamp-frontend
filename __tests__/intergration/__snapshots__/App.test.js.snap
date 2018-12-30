@@ -38,6 +38,11 @@ ShallowWrapper {
               exact={true}
               path="/register"
             />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/login"
+            />
           </Switch>
         </div>,
         <Footer />,
@@ -75,6 +80,11 @@ ShallowWrapper {
               exact={true}
               path="/register"
             />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/login"
+            />
           </Switch>,
           "className": "container",
         },
@@ -99,6 +109,11 @@ ShallowWrapper {
                 component={[Function]}
                 exact={true}
                 path="/register"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/login"
               />,
             ],
           },
@@ -138,6 +153,19 @@ ShallowWrapper {
                 "component": [Function],
                 "exact": true,
                 "path": "/register",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/login",
               },
               "ref": null,
               "rendered": null,
@@ -187,6 +215,11 @@ ShallowWrapper {
                 exact={true}
                 path="/register"
               />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/login"
+              />
             </Switch>
           </div>,
           <Footer />,
@@ -224,6 +257,11 @@ ShallowWrapper {
                 exact={true}
                 path="/register"
               />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/login"
+              />
             </Switch>,
             "className": "container",
           },
@@ -248,6 +286,11 @@ ShallowWrapper {
                   component={[Function]}
                   exact={true}
                   path="/register"
+                />,
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/login"
                 />,
               ],
             },
@@ -287,6 +330,19 @@ ShallowWrapper {
                   "component": [Function],
                   "exact": true,
                   "path": "/register",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/login",
                 },
                 "ref": null,
                 "rendered": null,
