@@ -1,7 +1,8 @@
-import { FETCH_QUESTIONS } from '../actions/types';
+import { FETCH_QUESTIONS, FETCH_QUESTION } from '../actions/types';
 
 const initialState = {
     questions: [],
+    question: {}
 }
 
 export default function(state = initialState, action) {
@@ -11,6 +12,11 @@ export default function(state = initialState, action) {
                 ...state,
                 questions: action.payload,
             };
+        case FETCH_QUESTION:
+            return {
+                ...state,
+                question: action.payload
+            }
         default:
             return state;
     }

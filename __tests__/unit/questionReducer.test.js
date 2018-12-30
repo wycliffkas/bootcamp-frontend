@@ -8,7 +8,7 @@ describe("questionReducer", () => {
         type: FETCH_QUESTIONS,
         payload: { questions: {}}
       })
-    ).toEqual({questions: {questions: {}}});
+    ).toEqual( {question: {}, questions: {questions: {}}});
   });
 
 });

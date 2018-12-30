@@ -9,7 +9,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/"
+    publicPath: '/',
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -42,6 +42,9 @@ const config = {
         use: ["style-loader", "css-loader"]
     }  
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new HTMLWebpackPlugin({
