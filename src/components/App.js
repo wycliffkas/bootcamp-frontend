@@ -4,6 +4,7 @@ import Header from './pages/Header';
 import Footer from './pages/Footer';
 import GetAllQuestions from './GetAllQuestions';
 import GetSingleQuestion from './GetSingleQuestion';
+import Register from './Register';
 
 const App = () => (
     <div>
@@ -12,6 +13,7 @@ const App = () => (
             <Switch>
                 <Route exact path="/" component={GetAllQuestions} />
                 <Route exact path="/questions/:id" component={GetSingleQuestion} /> 
+                <Route exact  path="/register" component={Register} />  
             </Switch>
         </div>
         <Footer />

@@ -2,8 +2,8 @@ import expect from "expect";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import fetchMock from "fetch-mock";
-import { fetchQuestions, fetchQuestion } from "../../src/actions/questions";
-import { FETCH_QUESTIONS, FETCH_QUESTION  } from "../../src/actions/types";
+import { fetchQuestions, fetchQuestion, registerUser } from "../../src/actions/questions";
+import { FETCH_QUESTIONS, FETCH_QUESTION, REGISTER_USER } from "../../src/actions/types";
 
 
 
@@ -55,6 +55,36 @@ describe("get a single question", () => {
     });
     const expectedActions = [];
     return store.dispatch(fetchQuestion(id)).then(() => {
+        expect(store.getActions()).toEqual(expectedActions);
+    });
+  });
+
+});
+
+describe("signup", () => {
+  afterEach(() => {
+    // eslint-disable-next-line no-undef
+    fetchMock.restore();
+  });
+  const middlewares = [thunk];
+  const mockStore = configureStore(middlewares);
+  const initialUserState = {question:[{
+    questions: [],
+  }]};
+  const store = mockStore({ ...initialUserState });
+   
+  it("FETCH_QUESTIONS action type", () => {
+    // eslint-disable-next-line no-undef
+    fetchMock.post("https://stack-challenge3.herokuapp.com/stack_overflow/api/v1/auth/signup", {
+      method: 'POST',
+      headers: {
+          'content-type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    });
+    const user = {};
+    const expectedActions = [];
+    return store.dispatch(registerUser(user)).then(() => {
         expect(store.getActions()).toEqual(expectedActions);
     });
   });

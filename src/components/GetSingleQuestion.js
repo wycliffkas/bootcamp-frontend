@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import { fetchQuestion } from '../actions/questions';
 import "../App.css";
 
-class getSingleQuestion extends Component {
+class GetSingleQuestion extends Component {
 
     componentWillMount(){
         const { match, fetchQuestion} = this.props;
@@ -17,20 +16,19 @@ class getSingleQuestion extends Component {
         const { question } = this.props;
         const questionItem = question => (
             <div className="panel panel-default">
-                <NavLink to={{pathname: `/questions/${question.questionId}`}}>
                     <h4>{question.question}</h4>
-                </NavLink>
                 <p>{question.description}</p>
                 <b>Author:</b> {question.author}
             </div>
         );
+
         return (
             <div>
-                <h3>Question</h3>
-                { questionItem(question) }
-                
+                <h3>Question</h3> 
+                <div>{ questionItem(question) }</div>
             </div>
-        );
+        )        
+
     }
 }
 
@@ -38,4 +36,9 @@ const mapStateToProps = state => ({
     question: state.questions.question,
 });
 
-export default connect(mapStateToProps, { fetchQuestion })(getSingleQuestion);
+export const mapDispatchToProps = dispatch => ({
+    fetchQuestion: (id) => dispatch(fetchQuestion(id))
+});
+
+export { GetSingleQuestion };
+export default connect(mapStateToProps, mapDispatchToProps)(GetSingleQuestion);

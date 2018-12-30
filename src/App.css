@@ -179,7 +179,7 @@
   th {
     padding: 0;
   }
-  /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+
   @media print {
     *,
     *:before,
@@ -431,7 +431,7 @@
   }
   h3,
   .h3 {
-    font-size: 24px;
+    font-size: 20px;
   }
   h4,
   .h4 {
@@ -639,6 +639,7 @@
   .row {
     margin-right: -15px;
     margin-left: -15px;
+    margin-top: 50px;
   }
   
   .dropup,
