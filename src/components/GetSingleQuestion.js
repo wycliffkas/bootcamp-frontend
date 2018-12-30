@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import { fetchQuestion } from '../actions/questions';
 import "../App.css";
 
@@ -17,9 +16,7 @@ class getSingleQuestion extends Component {
         const { question } = this.props;
         const questionItem = question => (
             <div className="panel panel-default">
-                <NavLink to={{pathname: `/questions/${question.questionId}`}}>
                     <h4>{question.question}</h4>
-                </NavLink>
                 <p>{question.description}</p>
                 <b>Author:</b> {question.author}
             </div>

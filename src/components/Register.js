@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { registerUser } from '../actions/questions';
 
-class  Register extends Component {
+class  register extends Component {
 
    constructor(props){
        super(props);
@@ -49,7 +49,7 @@ class  Register extends Component {
                     <input type="text" className="form-control" name="username" value={this.state.username} onChange={this.onChange} placeholder="Username" required/>
                     </div>
                     <div className="group">
-                    <input type="email" className="form-control" name="email" value={this.state.email} onChange={this.onChange} placeholder="Email" required/>
+                    <input type="text" className="form-control" name="email" value={this.state.email} onChange={this.onChange} placeholder="Email" required/>
                     </div>                    
                     <div className="group">
                     <input type="password" className="form-control" name="password" value={this.state.password} onChange={this.onChange} placeholder="Password" required/>
@@ -63,18 +63,4 @@ class  Register extends Component {
     };
 }
 
-// export default connect(null, { registerUser })(Register);
-const mapStateToProps = state => ({
-    question: state
-  });
-  
-  export const mapDispatchToProps = dispatch => ({
-    registerUser: data => dispatch(registerUser(data))
-  });
-  
-  export { Register };
-  
-  export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Register);
+export default connect(null, { registerUser })(register);
