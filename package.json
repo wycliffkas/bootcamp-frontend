@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "test": "NODE_ENV=testing jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "coverage": "jest --coverage",
+    "coverage": "test --coverage",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "start": "webpack-dev-server --mode development --open --hot",
     "heroku-prebuild": "npm install",
@@ -16,15 +16,15 @@
   "author": "wycliff kasirye",
   "license": "MIT",
   "dependencies": {
-    "babel-loader": "7",
     "babel-preset-react": "^6.24.1",
-    "coveralls": "^3.0.2",
     "expect": "^23.6.0",
     "fetch-mock": "^7.3.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
+    "jest-enzyme": "^7.0.1",
+    "kleur": "^3.0.1",
     "node-fetch": "^2.3.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
@@ -34,35 +34,28 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
-    "redux-mock-store": "^1.5.3",
     "redux-thunk": "^2.3.0",
     "toastr": "^2.1.4",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.14"
-  },
-  "devDependencies": {
+    "webpack-dev-server": "^3.1.14",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
+    "coveralls": "^3.0.2",
     "css-loader": "^2.1.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",
     "extract-text-webpack-plugin": "^3.0.2",
-<<<<<<< HEAD
-    "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
+    "jest-localstorage-mock": "^2.3.0",
     "redux-mock-store": "^1.5.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.3"
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": [
-      "text",
-      "html"
-    ],
     "setupTestFrameworkScriptFile": "<rootDir>__tests__/setup/setupEnzyme.js",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
@@ -77,9 +70,5 @@
     "testPathIgnorePatterns": [
       "<rootDir>/__tests__/setup/"
     ]
-=======
-    "style-loader": "^0.23.1",
-    "url-loader": "^1.1.2"
->>>>>>>         feat(ui) implement register a user
   }
 }

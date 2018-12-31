@@ -5,7 +5,8 @@ import Footer from './pages/Footer';
 import GetAllQuestions from './GetAllQuestions';
 import GetSingleQuestion from './GetSingleQuestion';
 import Register from './Register';
-import login from './login';
+import Login from './Login';
+import AddQuestion from './AddQuestion';
 
 const App = () => (
     <div>
@@ -15,7 +16,8 @@ const App = () => (
                 <Route exact path="/" component={GetAllQuestions} />
                 <Route exact path="/questions/:id" component={GetSingleQuestion} /> 
                 <Route exact  path="/register" component={Register} />  
-                <Route exact path="/login" component={login} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/addQuestion" component={AddQuestion} />
             </Switch>
         </div>
         <Footer />

@@ -18,7 +18,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Header />,
+        <Connect(Header) />,
         <div
           className="container"
         >
@@ -43,6 +43,11 @@ ShallowWrapper {
               exact={true}
               path="/login"
             />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/addQuestion"
+            />
           </Switch>
         </div>,
         <Footer />,
@@ -53,7 +58,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {},
         "ref": null,
         "rendered": null,
@@ -85,6 +90,11 @@ ShallowWrapper {
               exact={true}
               path="/login"
             />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/addQuestion"
+            />
           </Switch>,
           "className": "container",
         },
@@ -114,6 +124,11 @@ ShallowWrapper {
                 component={[Function]}
                 exact={true}
                 path="/login"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/addQuestion"
               />,
             ],
           },
@@ -171,6 +186,19 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/addQuestion",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
           ],
           "type": [Function],
         },
@@ -195,7 +223,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Header />,
+          <Connect(Header) />,
           <div
             className="container"
           >
@@ -220,6 +248,11 @@ ShallowWrapper {
                 exact={true}
                 path="/login"
               />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/addQuestion"
+              />
             </Switch>
           </div>,
           <Footer />,
@@ -230,7 +263,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {},
           "ref": null,
           "rendered": null,
@@ -262,6 +295,11 @@ ShallowWrapper {
                 exact={true}
                 path="/login"
               />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/addQuestion"
+              />
             </Switch>,
             "className": "container",
           },
@@ -291,6 +329,11 @@ ShallowWrapper {
                   component={[Function]}
                   exact={true}
                   path="/login"
+                />,
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/addQuestion"
                 />,
               ],
             },
@@ -343,6 +386,19 @@ ShallowWrapper {
                   "component": [Function],
                   "exact": true,
                   "path": "/login",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/addQuestion",
                 },
                 "ref": null,
                 "rendered": null,

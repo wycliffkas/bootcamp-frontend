@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { registerUser } from '../actions/questions';
 
-class  register extends Component {
+class  Register extends Component {
 
    constructor(props){
        super(props);
@@ -29,7 +29,7 @@ class  register extends Component {
             password: this.state.password
         };
 
-        this.props.registerUser(user);
+        this.props.RegisterUser(user);
 
     }
 
@@ -63,4 +63,17 @@ class  register extends Component {
     };
 }
 
-export default connect(null, { registerUser })(register);
+
+export const mapStateToProps = state => ({
+    question: state.questions.question
+  });
+  
+  export const mapDispatchToProps = dispatch => ({
+    RegisterUser: data => dispatch(registerUser(data))
+  });
+  export { Register };
+  
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Register);

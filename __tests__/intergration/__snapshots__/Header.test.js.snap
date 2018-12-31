@@ -1,0 +1,489 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render without crashing 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Header
+    logOut={[MockFunction]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="container-fluid"
+      >
+        <div
+          className="navbar-header"
+        >
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="navbar-brand"
+            to="/"
+          >
+            Stack Overflow Lite
+          </NavLink>
+        </div>
+        <ul
+          className="nav navbar-nav navbar-right"
+        >
+          <li>
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/register"
+            >
+               Register
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/login"
+            >
+               Login
+            </NavLink>
+          </li>
+        </ul>
+      </div>,
+      "className": "navbar navbar-inverse",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="navbar-header"
+          >
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="navbar-brand"
+              to="/"
+            >
+              Stack Overflow Lite
+            </NavLink>
+          </div>,
+          <ul
+            className="nav navbar-nav navbar-right"
+          >
+            <li>
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/register"
+              >
+                 Register
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/login"
+              >
+                 Login
+              </NavLink>
+            </li>
+          </ul>,
+        ],
+        "className": "container-fluid",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="navbar-brand"
+              to="/"
+            >
+              Stack Overflow Lite
+            </NavLink>,
+            "className": "navbar-header",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": "Stack Overflow Lite",
+              "className": "navbar-brand",
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": "Stack Overflow Lite",
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/register"
+                >
+                   Register
+                </NavLink>
+              </li>,
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/login"
+                >
+                   Login
+                </NavLink>
+              </li>,
+            ],
+            "className": "nav navbar-nav navbar-right",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/register"
+                >
+                   Register
+                </NavLink>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "children": " Register",
+                  "to": "/register",
+                },
+                "ref": null,
+                "rendered": " Register",
+                "type": [Function],
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/login"
+                >
+                   Login
+                </NavLink>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "children": " Login",
+                  "to": "/login",
+                },
+                "ref": null,
+                "rendered": " Login",
+                "type": [Function],
+              },
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "nav",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="container-fluid"
+        >
+          <div
+            className="navbar-header"
+          >
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="navbar-brand"
+              to="/"
+            >
+              Stack Overflow Lite
+            </NavLink>
+          </div>
+          <ul
+            className="nav navbar-nav navbar-right"
+          >
+            <li>
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/register"
+              >
+                 Register
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/login"
+              >
+                 Login
+              </NavLink>
+            </li>
+          </ul>
+        </div>,
+        "className": "navbar navbar-inverse",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="navbar-header"
+            >
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="navbar-brand"
+                to="/"
+              >
+                Stack Overflow Lite
+              </NavLink>
+            </div>,
+            <ul
+              className="nav navbar-nav navbar-right"
+            >
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/register"
+                >
+                   Register
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/login"
+                >
+                   Login
+                </NavLink>
+              </li>
+            </ul>,
+          ],
+          "className": "container-fluid",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="navbar-brand"
+                to="/"
+              >
+                Stack Overflow Lite
+              </NavLink>,
+              "className": "navbar-header",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "Stack Overflow Lite",
+                "className": "navbar-brand",
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": "Stack Overflow Lite",
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/register"
+                  >
+                     Register
+                  </NavLink>
+                </li>,
+                <li>
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/login"
+                  >
+                     Login
+                  </NavLink>
+                </li>,
+              ],
+              "className": "nav navbar-nav navbar-right",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/register"
+                  >
+                     Register
+                  </NavLink>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "aria-current": "page",
+                    "children": " Register",
+                    "to": "/register",
+                  },
+                  "ref": null,
+                  "rendered": " Register",
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    to="/login"
+                  >
+                     Login
+                  </NavLink>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "aria-current": "page",
+                    "children": " Login",
+                    "to": "/login",
+                  },
+                  "ref": null,
+                  "rendered": " Login",
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "nav",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

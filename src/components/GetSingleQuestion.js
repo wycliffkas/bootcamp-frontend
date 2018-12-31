@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchQuestion } from '../actions/questions';
 import "../App.css";
 
-class getSingleQuestion extends Component {
+class GetSingleQuestion extends Component {
 
     componentWillMount(){
         const { match, fetchQuestion} = this.props;
@@ -21,13 +21,14 @@ class getSingleQuestion extends Component {
                 <b>Author:</b> {question.author}
             </div>
         );
+
         return (
             <div>
-                <h3>Question</h3>
-                { questionItem(question) }
-                
+                <h3>Question</h3> 
+                <div>{ questionItem(question) }</div>
             </div>
-        );
+        )        
+
     }
 }
 
@@ -35,4 +36,9 @@ const mapStateToProps = state => ({
     question: state.questions.question,
 });
 
-export default connect(mapStateToProps, { fetchQuestion })(getSingleQuestion);
+export const mapDispatchToProps = dispatch => ({
+    fetchQuestion: (id) => dispatch(fetchQuestion(id))
+});
+
+export { GetSingleQuestion };
+export default connect(mapStateToProps, mapDispatchToProps)(GetSingleQuestion);

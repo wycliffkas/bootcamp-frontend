@@ -7,7 +7,11 @@ cache:
 install:
   - npm install
 script:
+  - rm -rf package-lock.json node_modules 
+  - npm install
   - npm install coveralls
-  - npm test -u 
+  - npm run test -- -u --coverage  
+after_script: # Upload coverage reports 
+  - COVERALLS_REPO_TOKEN="OYLIKzD0XuXclVwb4fxEMMRdLhVM2X9TO" npm run coveralls
 after_success:
-  - npm run coveralls
+  - npm coveralls
