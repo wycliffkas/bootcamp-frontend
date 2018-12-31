@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loginUser } from '../actions/questions';
 
-class  login extends Component {
+class  Login extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -56,4 +56,12 @@ class  login extends Component {
     };
 }
 
-export default connect(null, { loginUser })(login);
+export const mapDispatchToProps = dispatch => ({
+    loginUser: data => dispatch(loginUser(data))
+  });
+  export { Login };
+  
+  export default connect(
+    null,
+    mapDispatchToProps
+  )(Login);
