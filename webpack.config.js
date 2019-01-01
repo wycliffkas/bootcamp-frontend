@@ -1,27 +1,42 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = {
-    entry: './src/index.js',
-    output: {
-        path: path.join(__dirname, '/dist'),
-        filename: 'index_bundle.js'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
-            }
-        ]
-         
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html'
-        })
-    ]
-}
+const mode = process.env.NODE_ENV || "production";
+
+const config = {
+  mode,
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "/"
+  },
+  resolve: {
+    extensions: [".js", ".jsx"],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"]
+      },
+      {
+        test: /\.s?css/,
+        use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg|jpg|otf)$/i,
+        use: ["file-loader"],
+      },
+    ],
+  },
+  plugins: [
+    new HTMLWebpackPlugin({
+      template: "./src/index.html",
+    }),
+  ],
+};
+
+module.exports = config;
+
