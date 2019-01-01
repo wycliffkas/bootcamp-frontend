@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "lts/*"
+cache:
+  directories:
+    - node_modules
+install:
+  - npm i
+script:
+  - rm -rf package-lock.json node_modules 
+  - npm install coveralls
+  - npm test -- -u --coverage
+after_success:
+  - npm coveralls
