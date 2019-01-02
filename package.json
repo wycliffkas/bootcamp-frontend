@@ -11,7 +11,9 @@
   "author": "wycliff kasirye",
   "license": "MIT",
   "dependencies": {
+    "babel-core": "^6.26.3",
     "babel-loader": "7",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "html-webpack-plugin": "^3.2.0",
     "react": "^16.7.0",
