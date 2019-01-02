@@ -9,7 +9,9 @@
     "test:watch": "jest --watch",
     "coverage": "jest --coverage",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
-    "start": "webpack-dev-server --mode development --open --hot"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "heroku-prebuild": "npm install",
+    "heroku-postbuild": "npm build"
   },
   "author": "wycliff kasirye",
   "license": "MIT",
