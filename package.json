@@ -4,20 +4,20 @@
   "description": "front end bootcamp",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "build": "webpack",
+    "test": "NODE_ENV=testing jest",
     "test:watch": "jest --watch",
     "coverage": "jest --coverage",
-    "start": "webpack-dev-server --mode development --open --hot",
-    "bulid": "webpack --mode production"
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
+    "start": "webpack-dev-server --mode development --open --hot"
   },
   "author": "wycliff kasirye",
   "license": "MIT",
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "7",
-    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "coveralls": "^3.0.2",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
@@ -30,13 +30,16 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
+    "css-loader": "^2.1.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "redux-mock-store": "^1.5.3",
-    "webpack": "^4.28.3"
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.3",
+    "yarn": "^1.12.3"
   },
   "jest": {
     "collectCoverage": true,
