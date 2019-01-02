@@ -9,7 +9,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/"
+    publicPath: '/',
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -19,17 +19,32 @@ const config = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: {
+            loader: 'babel-loader'
+        }
+    },{
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: { minimize: true },
+          },
+        ],
+    },
+    {
+        test: /\.js$/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /(node_modules|bower_components|build)/,
+        loader: 'babel-loader'
       },
       {
-        test: /\.s?css/,
-        use: ["style-loader", "css-loader", "sass-loader"]
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg|jpg|otf)$/i,
-        use: ["file-loader"],
-      },
+        test: /\.(css|less)$/,
+        use: ["style-loader", "css-loader"]
+    }  
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new HTMLWebpackPlugin({
