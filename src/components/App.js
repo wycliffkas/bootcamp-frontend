@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Header from './pages/Header';
 import Footer from './pages/Footer';
 import GetAllQuestions from './GetAllQuestions';
+import GetSingleQuestion from './GetSingleQuestion';
 
 const App = () => (
     <div>
@@ -10,6 +11,7 @@ const App = () => (
         <div className="container">
             <Switch>
                 <Route exact path="/" component={GetAllQuestions} />
+                <Route exact path="/questions/:id" component={GetSingleQuestion} /> 
             </Switch>
         </div>
         <Footer />

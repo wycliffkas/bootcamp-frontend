@@ -28,6 +28,11 @@ ShallowWrapper {
               exact={true}
               path="/"
             />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/questions/:id"
+            />
           </Switch>
         </div>,
         <Footer />,
@@ -55,6 +60,11 @@ ShallowWrapper {
               exact={true}
               path="/"
             />
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/questions/:id"
+            />
           </Switch>,
           "className": "container",
         },
@@ -64,26 +74,48 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <Route
-              component={[Function]}
-              exact={true}
-              path="/"
-            />,
+            "children": Array [
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/"
+              />,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/questions/:id"
+              />,
+            ],
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "component": [Function],
-              "exact": true,
-              "path": "/",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/questions/:id",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         "type": "div",
@@ -117,6 +149,11 @@ ShallowWrapper {
                 exact={true}
                 path="/"
               />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/questions/:id"
+              />
             </Switch>
           </div>,
           <Footer />,
@@ -144,6 +181,11 @@ ShallowWrapper {
                 exact={true}
                 path="/"
               />
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/questions/:id"
+              />
             </Switch>,
             "className": "container",
           },
@@ -153,26 +195,48 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": <Route
-                component={[Function]}
-                exact={true}
-                path="/"
-              />,
+              "children": Array [
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/"
+                />,
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/questions/:id"
+                />,
+              ],
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "component": [Function],
-                "exact": true,
-                "path": "/",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
               },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "component": [Function],
+                  "exact": true,
+                  "path": "/questions/:id",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
             "type": [Function],
           },
           "type": "div",
