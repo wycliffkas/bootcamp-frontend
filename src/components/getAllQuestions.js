@@ -51,6 +51,11 @@ class GetAllQuestions extends Component {
     }
 }
 
+GetAllQuestions.propTypes = {
+    questions: PropTypes.array.isRequired,
+    fetchQuestions: PropTypes.func.isRequired,
+
+};
 
 export const mapStateToProps = state => ({
     questions: state.questions.questions,
