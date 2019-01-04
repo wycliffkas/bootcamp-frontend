@@ -58,10 +58,6 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": [
-      "text",
-      "html"
-    ],
     "setupTestFrameworkScriptFile": "<rootDir>__tests__/setup/setupEnzyme.js",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
