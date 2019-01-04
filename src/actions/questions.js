@@ -1,5 +1,6 @@
 import toastr from "toastr";
-import { FETCH_QUESTIONS, FETCH_QUESTION, LOGIN_USER, LOGIN_USER_FAIL, REGISTER_USER_FAIL, REGISTER_USER} from './types';
+import { FETCH_QUESTIONS, FETCH_QUESTION, LOGIN_USER, LOGIN_USER_FAIL, LOG_OUT, REGISTER_USER_FAIL, REGISTER_USER, ADD_QUESTION, ADD_QUESTION_FAIL} from './types';
+
 export const alert=(type,errorMsg,username, access_token, url)=>{
     if(type === "error" || "success"  && !username && !access_token){
       type === "success" ? toastr.success(errorMsg) && 
@@ -41,7 +42,7 @@ dispatch({ type: FETCH_QUESTION, payload: response });
 });
 
 export const registerUser = (user) => dispatch => 
-fetch('https://stack-challenge3.herokuapp.com/stack_overflow/api/v1/auth/signup', {
+ fetch('https://stack-challenge3.herokuapp.com/stack_overflow/api/v1/auth/signup', {
     method: 'POST',
     headers: {
         'content-type': 'application/json'
@@ -59,5 +60,55 @@ fetch('https://stack-challenge3.herokuapp.com/stack_overflow/api/v1/auth/signup'
     }
 })
 
+export const loginUser = (user) => dispatch => {
+    return fetch('https://stack-challenge3.herokuapp.com/stack_overflow/api/v1/auth/login', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
+    .then(res =>{
+        const response = res.json();
+        if (res.status === 200) {
+            response.then(response =>{
+            localStorage.setItem("token", response.access_token);
+            dispatch({ type: LOGIN_USER, payload: response })});            
+        } else {
+            response.then(response =>
+            dispatch({ type: LOGIN_USER_FAIL, payload: response }));
+        }
+    })
+};
+
+
+export const logOut = () => dispatch =>{
+    localStorage.removeItem("token");
+    return dispatch({
+      type: LOG_OUT,
+      payload: "Successfully logged out"
+    });
+};
+
+export const addNewQuestion = (question) => dispatch => {
+    return fetch('https://stack-challenge3.herokuapp.com/stack_overflow/api/v1/questions', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem("token")
+        },
+        body: JSON.stringify(question)
+    })
+    .then(res => {
+        const resp = res.json();
+        if (res.status === 201) {
+            resp.then(response =>
+            dispatch({ type: ADD_QUESTION, payload: response }));
+        } else {
+            resp.then(response =>
+            dispatch({ type: ADD_QUESTION_FAIL, payload: response }));
+        }
+    })
+};
 
 

@@ -29,7 +29,7 @@ class  Register extends Component {
             password: this.state.password
         };
 
-        this.props.registerUser(user);
+        this.props.RegisterUser(user);
 
     }
 
@@ -63,15 +63,14 @@ class  Register extends Component {
     };
 }
 
-// export default connect(null, { registerUser })(Register);
-const mapStateToProps = state => ({
-    question: state
+
+export const mapStateToProps = state => ({
+    question: state.questions.question
   });
   
   export const mapDispatchToProps = dispatch => ({
-    registerUser: data => dispatch(registerUser(data))
+    RegisterUser: data => dispatch(registerUser(data))
   });
-  
   export { Register };
   
   export default connect(
