@@ -1,13 +1,13 @@
 import toastr from "toastr";
-import { FETCH_QUESTIONS, FETCH_QUESTION, REGISTER_USER, REGISTER_USER_FAIL } from './types';
-
-export const alert=(type,errorMsg,username, token, url)=>{
-    if(type === "error" || "success"  && !username && !token){
-      type === "success" ? toastr.success(errorMsg) && setTimeout(() => window.location.replace(url), 3000): toastr.error(errorMsg);
+import { FETCH_QUESTIONS, FETCH_QUESTION, LOGIN_USER, LOGIN_USER_FAIL, REGISTER_USER_FAIL, REGISTER_USER} from './types';
+export const alert=(type,errorMsg,username, access_token, url)=>{
+    if(type === "error" || "success"  && !username && !access_token){
+      type === "success" ? toastr.success(errorMsg) && 
+      setTimeout(() => window.location.replace(url), 3000): toastr.error(errorMsg) && setTimeout(() => window.location.replace(url), 3000);
     }
     else if(type==="success" && !errorMsg){
       toastr.success(`Logging in as ${username}!`);
-      localStorage.setItem("token", token);
+      localStorage.setItem("token", access_token);
       localStorage.setItem("username", username);
       setTimeout(() => window.location.replace(url), 3000);
     };

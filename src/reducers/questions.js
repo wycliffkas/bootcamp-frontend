@@ -1,4 +1,4 @@
-import { FETCH_QUESTIONS, FETCH_QUESTION, REGISTER_USER, REGISTER_USER_FAIL} from '../actions/types';
+import { FETCH_QUESTIONS, FETCH_QUESTION, REGISTER_USER, REGISTER_USER_FAIL, LOGIN_USER, LOGIN_USER_FAIL} from '../actions/types';
 import { alert } from "../actions/questions";
 
 const initialState = {
@@ -30,7 +30,19 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 user: action.payload
-            }            
+            }  
+        case LOGIN_USER:
+            alert("success", "Successfully Loggedin ....Redirecting", null, null, "/");
+            return {
+                ...state,
+                user: action.payload
+            }    
+        case LOGIN_USER_FAIL:
+            alert("error", action.payload.message, null, null, "/login");
+            return {
+                ...state,
+                user: action.payload
+            }                                  
         default:
             return state;
     }
